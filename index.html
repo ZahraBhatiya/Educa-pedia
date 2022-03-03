@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Educapedia</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
+
+
+</head>
+<body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+		<table><a>
+          <tr>
+            <td><img src="img/logo.jpg" alt="" width="35px" />&nbsp;</td>
+            <td>Educa<span>pedia</span></td>
+          </tr>
+        </table></a>
+         
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#feature">Features</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Departments <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="civil.html">Civil Engineering</a></li>
+                <li><a href="me.html">Mechanical Engineering</a></li>
+                <li><a href="electrical.html">Electrical Engineering</a></li>
+                <li><a href="ce.html">Computer Engineering</a></li>
+                <li><a href="ece.html">Electronics and Communication Engineering</a></li>
+            </ul>
+          </li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#" data-target="#contact" data-toggle="modal">Contact Us</a></li>
+          <li><a href="#" data-target="#signup" data-toggle="modal">Sign up</a></li>
+          <li class="btn-trial"><a href="#" data-target="#login" data-toggle="modal">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Navigation bar-->
+  <!--Modal box-->
+<div class="modal fade" id="login" role="dialog">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content no 1-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center form-title">Login</h4>
+      </div>
+      <div class="modal-body padtrbl">
+
+        <div class="login-box-body">
+          <p class="login-box-msg">Sign in to start your session</p>
+          <div class="form-group">
+            <form name="" id="loginForm">
+              <div class="form-group has-feedback">
+                <!----- username -------------->
+                <input class="form-control" placeholder="Email Id" id="loginid" type="email" autocomplete="off" />
+                <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginid"></span>
+                <!---Alredy exists  ! -->
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+              </div>
+              <div class="form-group has-feedback">
+                <!----- password -------------->
+                <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" />
+                <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                <!---Alredy exists  ! -->
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="checkbox icheck">
+                    <a href="#" data-target="#forgotpass" data-toggle="modal">Forgot Password</a>
+                    
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Sign In</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--/ Modal box-->
+
+ <!--Modal box-->
+ <div class="modal fade" id="forgotpass" role="dialog">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content no 1-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center form-title">Reset Password</h4>
+      </div>
+      <div class="modal-body padtrbl">
+
+        <div class="login-box-body">
+          <p class="login-box-msg">Enter your email to reset password</p>
+          <div class="form-group">
+            <form name="" id="loginForm">
+              <div class="form-group has-feedback">
+                <!----- username -------------->
+                <input class="form-control" placeholder="Registered Email Id" id="loginid" type="email" autocomplete="off" />
+                <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginid"></span>
+                <!---Alredy exists  ! -->
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+              </div>
+              <div class="col-xs-12">
+                <button type="button" class="btn btn-green btn-block btn-flat"> Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--/ Modal box-->
+
+    <!--Modal box-->
+    <div class="modal fade" id="signup" role="dialog">
+      <div class="modal-dialog modal-sm">
+  
+        <!-- Modal content no 1-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-center form-title">Create Account</h4>
+          </div>
+          <div class="modal-body padtrbl">
+  
+            <div class="login-box-body">
+              <p class="login-box-msg">Sign up to start your session</p>
+              <div class="form-group">
+                <form name="registration" id="loginForm" method="post" action="registration.php">
+                  <div class="form-group has-feedback">
+                    <!----- firstname -------------->
+                    <input class="form-control" placeholder="first name" name="fname" id="fname" type="text" autocomplete="off" />
+                  <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginid"></span>
+                   <!---Alredy exists  ! -->
+                   <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                
+                  </div>
+                  <div class="form-group has-feedback">
+                  <!----- lastname -------------->
+                      <input class="form-control" placeholder="last name" name="lname" id="lname" type="text" autocomplete="off" />
+                      <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginid"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+  
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- email id -------------->
+                    <input class="form-control" placeholder="email id" name="email" id="email" type="email" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+  
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                  </div>
+                  
+  
+  
+                  <div class="form-group has-feedback">
+                    <!----- password -------------->
+                    <input class="form-control" placeholder="Password" name="password" id="password" type="password" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <span class="glyphicon glyphicon-eye-open form-control-feedback"></span>
+                    
+                    
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- confirm password-------------->
+                    <input class="form-control" placeholder="confirm Password" name="password" id="password" type="password" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- city -------------->
+                    <input class="form-control" placeholder="city" name="city" id="city" type="text" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- state -------------->
+                    <input class="form-control" placeholder="state" name="state" id="state" type="text" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- country-------------->
+                    <input class="form-control" placeholder="country" name="country" id="country" type="text" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- birthdate -------------->
+                    <input class="form-control" placeholder="birthdate" name="birthdate" id="birthdate" type="date" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- field/courses-------------->
+                    <input class="form-control" placeholder="course"  name="course" id="course" type="text" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                      <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  
+                    </div>
+                  <div class="form-group has-feedback">
+                    <!----- college -------------->
+                    <input class="form-control" placeholder="college" name="college" id="college" type="text" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- university-------------->
+                    <input class="form-control" placeholder="university" name="university" id="university" type="text" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <!----- graduation(year)-------------->
+                    <input class="form-control" placeholder="graduation(year)" name="graduation" id="graduation" type="year" autocomplete="off" />
+                    <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
+                    <!---Alredy exists  ! -->
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      
+                    </div>
+                    <div class="col-xs-12">
+                      <button type="submit" class="btn btn-green btn-block btn-flat" name="btn">Sign up</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <!--/ Modal box-->
+
+     <!--contact us-->
+  <!--Modal box-->
+  <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Contact us</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#contactus" data-toggle="tab">For more information you can connect us</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="contact">
+						<form role="form" method="post" class="form-horizontal" action="contact.php">
+              <div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="name" id="name" placeholder="your name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="email" id="email" placeholder="your email" type="email">
+								</div>
+							</div>
+              <div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="mobile" id="mobile" placeholder="your mobile" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="subject" id="subject" placeholder="your subject" type="text">
+								</div>
+							</div>
+              <div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="message" id="message" placeholder="your message" type="textarea">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1" name="btn">	SEND</button>
+									
+								</div>
+							</div>
+						</form>
+					</div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+<!--end contact us-->
+
+  <!--Banner-->
+  <div class="banner">
+    <div class="bg-color">
+      <div class="container">
+        <div class="row">
+          <div class="banner-text text-center">
+            <div class="text-border">
+              <h2 class="text-dec">Trust & Quality</h2>
+            </div>
+            <div class="intro-para text-center quote">
+              <p class="big-text">Learning Today . . . Leading Tomorrow.</p>
+              <p class="small-text">Art without engineering is dreaming. Engineering without art is calculating.</p>
+              <a href="#footer" class="btn get-quote">Discover</a>
+            </div>
+            <a href="#feature" class="mouse-hover">
+              <div class="mouse"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Banner-->
+  <!--About-->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+  
+       <div class="header-section text-center">
+          <h2>ABOUT US</h2>
+          <p>Every individual has the potential to create change, whether in their life, their community, or the world.
+            The transformative power of education is what unlocks that potential.
+            Yet, access to high-quality education has been a privilege of the few.
+              we realized it was a time for a seismic shift in learning. 
+              From “for some” to “for all.”
+           By opening the Website through online</p>
+          <hr class="bottom-line">
+        </div>
+      </div>
+    </div>
+</section>
+
+<!--About/-->
+  <!--Feature-->
+  <section id="feature" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+          <h2>Features</h2>
+          <p></p>
+          <hr class="bottom-line">
+        </div>
+        <div class="feature-info">
+          <div class="fea">
+            <div class="col-md-3">
+              <div class="heading pull-right">
+                <h4>STUDY MATERIAL</h4>
+                <p>E-books, pdfs, Lectures notes, sample questions paper.</p>
+              </div>
+              <div class="pull-left">
+                <i class="fa fa-book"></i>
+              </div>
+            </div>
+          </div>
+          <div class="fea">
+            <div class="col-md-3">
+              <div class="heading pull-right">
+                <h4>ARTICLES & BLOG</h4>
+                <p>To keep student updated and motivated.</p>
+              </div>
+              <div class=" pull-left">
+                <i class="fa fa-info-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div class="fea">
+            <div class="col-md-3">
+              <div class="heading pull-right">
+                <h4>ALERTS</h4>
+                <p>About jobs and internship opportunities.</p>
+              </div>
+              <div class=" pull-left">
+                <i class="fa fa-industry"></i>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="fea">
+            <div class="col-md-3">
+              <div class="heading pull-right">
+                <h4>CHATS</h4>
+                <p>Students can form groups and chat.</p>
+              </div>
+              <div class="pull-left">
+                <i class="fa fa-comments"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ feature-->
+
+  <!--work-shop-->
+  <section id="news" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+          <h2>Upcoming Workshop</h2>
+          <p>career counselling</p>
+          <hr class="bottom-line">
+        </div>
+      </div>
+    </div>
+    </section>
+       
+  <!--/ work-shop-->
+  <!--brightstrom member-->
+  <section id="faculity-member" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+          <h2>Meet Our Brightstorm Family</h2>
+          <p></p>
+          <hr class="bottom-line">
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-4">
+          <div class="pm-staff-profile-container">
+            <div class="pm-staff-profile-image-wrapper text-center">
+              
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name">Tasnim Dudhiya</p>
+              <p class="pm-staff-profile-title">Electronics and Communication Engineer</p>
+
+              <p class="pm-staff-profile-bio"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-4">
+          <div class="pm-staff-profile-container">
+            <div class="pm-staff-profile-image-wrapper text-center">
+              
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name">Zahra Bhatiya</p>
+              <p class="pm-staff-profile-title">Electronics and Communication Engineer</p>
+
+              <p class="pm-staff-profile-bio"> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-4">
+          <div class="pm-staff-profile-container">
+            <div class="pm-staff-profile-image-wrapper text-center">
+              
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name">Alefiya Ravat</p>
+              <p class="pm-staff-profile-title">Electronics and Communication Engineer</p>
+
+              <p class="pm-staff-profile-bio"> </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-4">
+          <div class="pm-staff-profile-container">
+            <div class="pm-staff-profile-image-wrapper text-center">
+              
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name">Fatema Modi</p>
+              <p class="pm-staff-profile-title">Electronics and Communication Engineer</p>
+
+              <p class="pm-staff-profile-bio"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Brightstrom member-->
+
+  
+  
+  <!--Courses-->
+<section id="courses" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2>Departments</h2>
+        <p></p>
+        <hr class="bottom-line">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <img src="img/civil.jpg" class="img-responsive" style="width: 1050px; height:500px;">
+          <figcaption>
+            <h3>Civil Engineering</h3>
+            <p>The Road to Success is always under Construction </p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <img src="img/mechanical.jpg" class="img-responsive" style="width: 700px; height:250px;">
+          <figcaption>
+            <h3>Mechanical Engineering</h3>
+            <p>Once it was Constructional, then it was Logical, it was sinusoidal but Forever it was Mechanical.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <img src="img/electrical.jpg" class="img-responsive" style="width: 700px; height:250px;">
+          <figcaption>
+            <h3>Electrical Engineering</h3>
+            <p>Peace be amplified, world be rectified.
+              We step up, We Transform
+              Electrifying the world with least resistance.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <img src="img/computer.jpg" class="img-responsive" style="width: 700px; height:250px;">
+          <figcaption>
+            <h3>Computer Engineering</h3>
+            <p>My friends think I'm computer genius for always fixing their computers. Truthfully, I'm just really better at using Google than they are.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <img src="img/ece.jpg" class="img-responsive" style="width: 700px; height:250px;">
+          <figcaption>
+            <h3>Electronics and Communication Engineering</h3>
+            <p>Modulate your Memory , Demodulate your Daze Everyone seems to suck at communication these days even though we are constantly staring at the devices originally made for communication.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Courses-->
+ 
+  
+ <!--Footer-->
+<footer id="footer" class="footer"><left>
+    
+      <div class="row">
+        <div class="container text-left">
+          <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="widget clearfix">
+                <div class="widget-title">
+                    <h3>About Us</h3>
+                </div>
+                <p>We </p>
+              </div><!-- end clearfix -->
+        </div><!-- end col -->
+<div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="widget clearfix">
+                <div class="widget-title">
+                    <h3>Information Link</h3>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Contact</a></li>
+                 </ul><!-- end links -->
+              </div><!-- end clearfix -->
+        </div><!-- end col -->
+
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <div class="widget clearfix">
+                <div class="widget-title">
+                    <h3>Contact Details</h3>
+                </div>
+
+                <ul class="footer-links">
+                    <li><a href="mailto:educapediastuff@gmail.com">educapediastuff@gmail.com</a></li>
+                    <li><a href="index.html">http://localhost/educapedia/</a></li>
+                </ul><!-- end links -->
+            </div><!-- end clearfix -->
+        </div><!-- end col -->
+
+    </div><!-- end row -->
+    </div>
+      <!-- End newsletter-form -->
+      <div class="container text-center">
+      <ul class="social-links">
+        <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
+        <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
+        <li><a href="#link"><i class="fa fa-google-plus fa-fw"></i></a></li>
+        <li><a href="#link"><i class="fa fa-instagram fa-fw"></i></a></li>
+        <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
+        <li><a href="#link"><i class="fa fa-pinterest fa-fw"></i></a></li>
+      </ul>
+    
+      ©2022 All rights reserved
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">Team Brightstorm</a>
+      </div>
+    </div>
+  </left>
+</footer>
+<!--/ Footer-->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+
+</body>
+
+</html>
