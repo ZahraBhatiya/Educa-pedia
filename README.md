@@ -1,4 +1,4 @@
-# Educapedia [student community platform]-
+# Educapedia-[student community platform]-
 Student Community Platform
 Where students from all over the world come together to grow and build a sustainable career.
 Here we provide e-books/pdfs, notes and customized quiz for hands-on study. Articles and blog post for keeping students updated.
